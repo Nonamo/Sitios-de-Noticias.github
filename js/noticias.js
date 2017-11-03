@@ -52,3 +52,9 @@ function recortarNoticias(cantPalabras) {
 //marcarNoticiasConWhile()
 //marcarNoticiasConFor()
 // ...
+
+/* Crear variables y bucles para cumplir con los siguientes requerimientos:
+a. Eliminar noticias relacionadas a Google.
+b. Resaltar con un color las noticias nacionales de Argentina.
+c. Resaltar con otro color las noticias sobre robótica.
+d. Recortar las noticias que sean demasiado largas. */
