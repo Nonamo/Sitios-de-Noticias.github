@@ -12,10 +12,7 @@
 // que su largo sea cantidadPalabras
 
 
-var noticias = obtenerNoticias() {
-  return document.querySelectorAll('.highlighted');
-
-}
+var noticias = obtenerNoticias();
 
 // Esta función está de muestra para ver como funciona el while
 // Sólo se está recorriendo las noticias y cambiándole el color
@@ -44,12 +41,7 @@ function resaltarNoticiasQueContengan(palabra, color) {
 
 // Si la noticia incluye la palabra, la ocultamos.
 function ocultarNoticiasQueContengan(palabra) {
-  function contienePalabra(noticia, palabra) {
-    texto = noticia.innerText;
-    if (texto.indexOf(palabra) >= 0) {
-      return true;
-    }
-  }
+
 }
 
 function recortarNoticias(cantPalabras) {
