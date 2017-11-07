@@ -9,11 +9,12 @@
 // pasada como parámetro
 //
 // recortarTexto(noticia, cantidadPalabras): recorta el texto de la noticia para
-// que su largo sea cantidadPalabras
+// que su largo sea cantidadPalabras.
 
+//Declaración de las variables....
 
 var noticias = obtenerNoticias();
-
+/*
 // Esta función está de muestra para ver como funciona el while
 // Sólo se está recorriendo las noticias y cambiándole el color
 function marcarNoticiasConWhile() {
@@ -33,15 +34,26 @@ function marcarNoticiasConFor() {
     cambiarColor(noticiaActual, 'rgb(235, 190, 162)');
   }
 }
-
+*/
 // Esta la tienen que hacer, puede ser con while o for
 function resaltarNoticiasQueContengan(palabra, color) {
+  for (var contador = 0; contador < noticias.length; contador++) {
+    noticias[contador];
+    if (contienePalabra(noticias,palabra)) {
+        cambiarColor(noticiaActual,color);
+    }
+  }
 
 }
 
 // Si la noticia incluye la palabra, la ocultamos.
 function ocultarNoticiasQueContengan(palabra) {
-
+  for (var contador = 0; contador < noticias.length; contador++) {
+    noticiaActual = noticias[contador];
+    if (contienePalabra(noticiaActual, palabra)) {
+      ocultarNoticia(noticiaActual);
+    }
+  }
 }
 
 function recortarNoticias(cantPalabras) {
@@ -52,3 +64,9 @@ function recortarNoticias(cantPalabras) {
 //marcarNoticiasConWhile()
 //marcarNoticiasConFor()
 // ...
+
+obtenerNoticias();
+
+ocultarNoticiasQueContengan("Google");
+
+resaltarNoticiasQueContengan("Argentina", "red");
