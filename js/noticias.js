@@ -56,9 +56,12 @@ function ocultarNoticiasQueContengan(palabra) {
 
 function recortarNoticias(cantPalabras) {
   for (var i = 0; i < noticias.length; i++) {
-    recortarTexto(noticia[i],cantPalabras);
+    noticiaActual = noticias[i];
+    recortarTexto(noticiaActual,cantPalabras);
   }
 }
+
+
 
 // Acá abajo podés poner las funciones que quieras usar
 //marcarNoticiasConWhile()
@@ -71,4 +74,4 @@ resaltarNoticiasQueContengan('Media', 'rgb(53, 208, 237)');
 
 resaltarNoticiasQueContengan('robots', 'rgb(133, 31, 222)');
 
-recortarNoticias(20);
+recortarNoticias(17);
