@@ -15,6 +15,7 @@
 
 var noticias = obtenerNoticias();
 
+
 // Esta función está de muestra para ver como funciona el while
 // Sólo se está recorriendo las noticias y cambiándole el color
 function marcarNoticiasConWhile() {
@@ -34,10 +35,10 @@ function marcarNoticiasConFor() {
     cambiarColor(noticiaActual, 'rgb(235, 190, 162)');
   }
 }
-/*-------------------------------------------------------------------------------------------*/
-// Esta la tienen que hacer, puede ser con while o for // al llamar la función, vuelva aparecer la nota de Google
+
+// Esta la tienen que hacer, puede ser con while o for
 function resaltarNoticiasQueContengan(palabra, color) {
-  for(var i = 0; i <= noticias.length; i++){
+  for(var i = 0; i < noticias.length; i++){
     if(contienePalabra(noticias[i],palabra)){
         cambiarColor(noticias[i], color);
     }
@@ -46,7 +47,7 @@ function resaltarNoticiasQueContengan(palabra, color) {
 
 // Si la noticia incluye la palabra, la ocultamos.  // hecho!!
 function ocultarNoticiasQueContengan(palabra) {
-  for (var i = 0; i <= noticias.length; i++) {
+  for (var i = 0; i < noticias.length; i++) {
     if (contienePalabra(noticias[i], palabra)) {
       ocultarNoticia(noticias[i]);
     }
@@ -54,7 +55,9 @@ function ocultarNoticiasQueContengan(palabra) {
 }
 
 function recortarNoticias(cantPalabras) {
-
+  for (var i = 0; i < noticias.length; i++) {
+    recortarTexto(noticia[i],cantPalabras);
+  }
 }
 
 // Acá abajo podés poner las funciones que quieras usar
@@ -64,4 +67,8 @@ function recortarNoticias(cantPalabras) {
 
 ocultarNoticiasQueContengan("Google");
 
-resaltarNoticiasQueContengan("Argentina",rgb(53, 208, 237));
+resaltarNoticiasQueContengan('Media', 'rgb(53, 208, 237)');
+
+resaltarNoticiasQueContengan('robots', 'rgb(133, 31, 222)');
+
+recortarNoticias(20);
